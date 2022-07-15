@@ -1,11 +1,14 @@
 <?php
 
 require_once 'lib.php';
+require_once 'index.php';
 
 $method = $_SERVER['REQUEST_METHOD'];
 $path = $_SERVER['PATH_INFO'];
 
 loginfo("MOYSKLAD => APP", "Received: method=$method, path=$path");
+
+$PATH_GLOBAL = $path;
 
 $pp = explode('/', $path);
 $n = count($pp);
