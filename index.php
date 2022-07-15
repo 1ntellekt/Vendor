@@ -1,8 +1,8 @@
 <?php 
 
- global $PATH_GLOBAL;
+require_once 'src/php/single.php';
 
-echo "Hello world.".$PATH_GLOBAL; 
+echo "Hello world.".Singleton::getPath(); 
 
 
 

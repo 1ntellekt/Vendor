@@ -1,14 +1,14 @@
 <?php
 
 require_once 'lib.php';
-require_once 'index.php';
+require_once 'single.php';
 
 $method = $_SERVER['REQUEST_METHOD'];
 $path = $_SERVER['PATH_INFO'];
 
-loginfo("MOYSKLAD => APP", "Received: method=$method, path=$path");
+Singleton::setPath($path);
 
-$PATH_GLOBAL = $path;
+loginfo("MOYSKLAD => APP", "Received: method=$method, path=$path");
 
 $pp = explode('/', $path);
 $n = count($pp);
