@@ -3,7 +3,7 @@
 class Singleton
 {
 
-    private static $path = null;
+    private static $path = 'none';
 
     public static function getPath()
     {
